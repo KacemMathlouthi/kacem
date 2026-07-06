@@ -35,16 +35,6 @@ export function Bio() {
       </p>
 
       <p>
-        I also served as <Highlight>Technical Manager</Highlight> for{" "}
-        <Brand {...brands.ains} big>
-          AINS 3.0
-        </Brand>
-        , the AI National Summit by <Brand {...brands.ieee}>IEEE CS</Brand>{" "}
-        INSAT, where I led a three-track hackathon, a data science competition,
-        and four workshops.
-      </p>
-
-      <p>
         Outside of work, I build things I wish existed. Right now I&apos;m
         building <Brand {...brands.animus}>Animus</Brand>, a platform that turns
         any topic into narrated, research-grounded{" "}
@@ -73,8 +63,15 @@ export function Bio() {
         <Brand {...brands.insat} big>
           INSAT
         </Brand>{" "}
-        in Tunis, graduating in 2027, and I like building things that put AI to
-        practical use.
+        in Tunis, graduating in 2027, where I also served as{" "}
+        <Highlight>Technical Manager</Highlight> for{" "}
+        <Brand {...brands.ains} big>
+          AINS 3.0
+        </Brand>
+        , the AI National Summit by{" "}
+        <Brand {...brands.ieee}>IEEE CS INSAT</Brand>, leading a three-track
+        hackathon, a data science competition, and four workshops. I like
+        building things that put AI to practical use.
       </p>
     </div>
   )

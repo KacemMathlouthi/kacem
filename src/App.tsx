@@ -7,7 +7,7 @@ export function App() {
   return (
     <main className="w-full">
       <Intersection2>
-        <div className="reveal flex flex-col gap-6 px-6 py-12 zoom-[0.9] sm:px-8">
+        <div className="reveal flex flex-col gap-6 px-6 py-12 sm:px-8">
           <Hero />
           <Bio />
           <SocialLinks />
