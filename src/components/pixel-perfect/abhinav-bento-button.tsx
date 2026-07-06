@@ -8,7 +8,7 @@ import type {
 import { cn } from "@/lib/utils"
 
 const surfaceClassName =
-  "px-4 py-2 rounded-full aspect-square transition-transform duration-200 ease-out hover:-translate-y-0.5"
+  "px-4 py-2 rounded-full aspect-square transition-transform duration-200 ease-out hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 
 // Glossy raised surface: soft outer halo + bright inset rim, from theme tokens.
 const surfaceStyle: CSSProperties = {
