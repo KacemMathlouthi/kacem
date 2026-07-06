@@ -11,29 +11,27 @@ export function Bio() {
         I&apos;m a <Highlight>software engineer</Highlight> at{" "}
         <Brand {...brands.callab}>Callab&nbsp;AI (YC&nbsp;P26)</Brand>, which I
         joined before we got into{" "}
-        <Brand {...brands.yc}>Y&nbsp;Combinator</Brand> as a team, and where I
-        build an <Highlight>AI voice agents platform</Highlight> for{" "}
-        <Highlight>on-prem telephony</Highlight>, made to work with existing
-        PBX, SBC, and contact center infrastructure out of the box without any
-        migration.
+        <Brand {...brands.yc}>Y&nbsp;Combinator</Brand> as a team, where I build
+        an <Highlight>AI voice agents platform</Highlight> for on-prem telephony
+        that works with existing PBX, SBC, and contact center infrastructure,
+        no migration needed.
       </p>
 
       <p>
         Before that, I spent the summer as a{" "}
         <Brand {...brands.gsoc}>Google Summer of Code&nbsp;&apos;25</Brand>{" "}
         fellow at <Brand {...brands.nrnb}>NRNB</Brand>, where I built{" "}
-        <Highlight>VCell-AI</Highlight>, an AI agent platform that lets{" "}
-        <Highlight>computational biology researchers</Highlight> query, explore,
-        and generate <Highlight>biomodels</Highlight> in natural language.
+        <Highlight>VCell-AI</Highlight>, an AI agent platform that lets
+        computational biology researchers query, explore, and generate
+        biomodels in natural language.
       </p>
 
       <p>
         Earlier, I was a{" "}
         <Highlight>machine learning engineering intern</Highlight> at{" "}
-        <Brand {...brands.orange}>Orange</Brand>, designing an{" "}
+        <Brand {...brands.orange}>Orange</Brand>, building an{" "}
         <Highlight>edge-optimized CNN</Highlight> for plant disease
-        classification and an{" "}
-        <Highlight>agentic report generation pipeline</Highlight>.
+        classification and an agentic report generation pipeline.
       </p>
 
       <p>
@@ -42,21 +40,18 @@ export function Bio() {
           AINS 3.0
         </Brand>
         , the AI National Summit by <Brand {...brands.ieee}>IEEE CS</Brand>{" "}
-        INSAT, where I led a <Highlight>three-track hackathon</Highlight>, a{" "}
-        <Highlight>data science competition</Highlight>, and{" "}
-        <Highlight>four workshops</Highlight>.
+        INSAT, where I led a three-track hackathon, a data science competition,
+        and four workshops.
       </p>
 
       <p>
         Outside of work, I build things I wish existed. Right now I&apos;m
-        building <Brand {...brands.animus}>Animus</Brand>, a platform that
-        produces narrated, research-grounded{" "}
-        <Highlight>Manim explainer videos</Highlight> for any topic. Before that
-        I built <Brand {...brands.metis}>Metis</Brand>, an AI platform for
-        GitHub pull requests with a <Highlight>cloud coding agent</Highlight>{" "}
-        for <Highlight>autonomous code review</Highlight>,{" "}
-        <Highlight>background issue resolution</Highlight>, and{" "}
-        <Highlight>automatic PR title and summary generation</Highlight>.
+        building <Brand {...brands.animus}>Animus</Brand>, a platform that turns
+        any topic into narrated, research-grounded{" "}
+        <Highlight>Manim explainer videos</Highlight>. Before that I built{" "}
+        <Brand {...brands.metis}>Metis</Brand>, an AI platform for GitHub pull
+        requests with a <Highlight>cloud coding agent</Highlight> for autonomous
+        code review, issue resolution, and PR summaries.
       </p>
 
       <p>
@@ -67,10 +62,9 @@ export function Bio() {
           Corruption and Perturbation Affect Robustness of Generalization
           Measures&rdquo;
         </span>
-        , which revisits whether <Highlight>generalization measures</Highlight>{" "}
-        that look reliable under <Highlight>IID evaluation</Highlight> still
-        hold up when image classifiers face controlled{" "}
-        <Highlight>corruptions and perturbations</Highlight>.
+        , which asks whether generalization measures that look reliable under
+        IID evaluation still hold up when image classifiers face corruptions and
+        perturbations.
       </p>
 
       <p>

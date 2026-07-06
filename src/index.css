@@ -199,3 +199,15 @@
     transition: none !important;
   }
 }
+
+/* Brand links glow in their own accent on hover (currentColor = brand color). */
+.brand-link {
+  transition: text-shadow 0.25s ease;
+}
+.brand-link:hover,
+.brand-link:focus-visible {
+  text-shadow:
+    0 0 8px color-mix(in srgb, currentColor 55%, transparent),
+    0 0 18px color-mix(in srgb, currentColor 30%, transparent);
+  outline: none;
+}
