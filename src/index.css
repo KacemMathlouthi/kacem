@@ -164,7 +164,7 @@
   }
 }
 
-/* Icon swap — blur + scale crossfade between two stacked icons.
+/* Icon swap: blur + scale crossfade between two stacked icons.
    Adapted from Transitions.dev. */
 .t-icon-swap {
   --icon-swap-dur: 250ms;
@@ -200,14 +200,37 @@
   }
 }
 
-/* Brand links glow in their own accent on hover (currentColor = brand color). */
-.brand-link {
-  transition: text-shadow 0.25s ease;
+/* Brand logo swaps to an outbound arrow on hover (stacked, blur + scale). */
+.brand-swap {
+  display: inline-grid;
 }
-.brand-link:hover,
-.brand-link:focus-visible {
-  text-shadow:
-    0 0 8px color-mix(in srgb, currentColor 55%, transparent),
-    0 0 18px color-mix(in srgb, currentColor 30%, transparent);
-  outline: none;
+.brand-swap > * {
+  grid-area: 1 / 1;
+  place-self: center;
+  transition:
+    opacity 0.3s ease-in-out,
+    filter 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+.brand-swap .swap-arrow {
+  opacity: 0;
+  filter: blur(2px);
+  transform: scale(0.25);
+}
+.brand-link:hover .brand-swap .swap-logo,
+.brand-link:focus-visible .brand-swap .swap-logo {
+  opacity: 0;
+  filter: blur(2px);
+  transform: scale(0.25);
+}
+.brand-link:hover .brand-swap .swap-arrow,
+.brand-link:focus-visible .brand-swap .swap-arrow {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-swap > * {
+    transition: none;
+  }
 }

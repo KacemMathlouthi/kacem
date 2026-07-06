@@ -1,4 +1,5 @@
 import type { ReactNode } from "react"
+import { ArrowUpRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import type { BrandStyle } from "@/lib/brands"
@@ -11,11 +12,42 @@ type BrandProps = BrandStyle & {
 
 /**
  * An entity name preceded by its inline logo and shown in its brand accent.
- * When `href` is set the name becomes a link.
+ * When `href` is set the name becomes a link that glows on hover and swaps
+ * its logo for an arrow to signal the outbound link.
  */
 export function Brand({ logo, color, href, big, children }: BrandProps) {
-  const inner = (
-    <>
+  const size = big ? "h-[1.35em] w-[1.35em]" : "h-[1.05em] w-[1.05em]"
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="brand-link font-medium underline-offset-2 hover:underline"
+        style={{ color }}
+      >
+        {logo && (
+          <span className="brand-swap mr-1.5 -translate-y-px align-middle">
+            <img
+              src={logo}
+              alt=""
+              aria-hidden
+              className={cn(
+                "swap-logo inline-block w-auto",
+                big ? "h-[1.35em]" : "h-[1.05em]"
+              )}
+            />
+            <ArrowUpRight className={cn("swap-arrow", size)} aria-hidden />
+          </span>
+        )}
+        {children}
+      </a>
+    )
+  }
+
+  return (
+    <span className="font-medium" style={{ color }}>
       {logo && (
         <img
           src={logo}
@@ -28,26 +60,6 @@ export function Brand({ logo, color, href, big, children }: BrandProps) {
         />
       )}
       {children}
-    </>
-  )
-
-  if (href) {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="brand-link font-medium"
-        style={{ color }}
-      >
-        {inner}
-      </a>
-    )
-  }
-
-  return (
-    <span className="font-medium" style={{ color }}>
-      {inner}
     </span>
   )
 }
