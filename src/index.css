@@ -135,3 +135,31 @@
     color: var(--background);
     }
 }
+
+/* Subtle staggered entrance for the main sections (heading, bio, links). */
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal > * {
+    opacity: 0;
+    animation: fade-rise 0.5s ease forwards;
+  }
+  .reveal > *:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+  .reveal > *:nth-child(2) {
+    animation-delay: 0.16s;
+  }
+  .reveal > *:nth-child(3) {
+    animation-delay: 0.27s;
+  }
+}
