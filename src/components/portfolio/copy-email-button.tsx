@@ -3,6 +3,8 @@ import { Check, Mail } from "lucide-react"
 
 import AbhinavBentoButton from "@/components/pixel-perfect/abhinav-bento-button"
 
+import { IconSwap } from "./icon-swap"
+
 const EMAIL = "kacem.mathlouthi@insat.ucar.tn"
 
 /** Copies the email to the clipboard (falling back to a mailto link). */
@@ -27,11 +29,11 @@ export function CopyEmailButton() {
       title={copied ? "Copied!" : EMAIL}
       className="grid size-11 place-items-center p-0"
     >
-      {copied ? (
-        <Check className="size-5 text-foreground" />
-      ) : (
-        <Mail className="size-5 text-foreground" />
-      )}
+      <IconSwap
+        state={copied ? "b" : "a"}
+        iconA={<Mail className="size-5 text-foreground" />}
+        iconB={<Check className="size-5 text-foreground" />}
+      />
     </AbhinavBentoButton>
   )
 }
