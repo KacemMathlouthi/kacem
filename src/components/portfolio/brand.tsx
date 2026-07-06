@@ -9,10 +9,13 @@ type BrandProps = BrandStyle & {
   children: ReactNode
 }
 
-/** An entity name preceded by its inline logo and shown in its brand accent. */
-export function Brand({ logo, color, big, children }: BrandProps) {
-  return (
-    <span className="font-medium" style={{ color }}>
+/**
+ * An entity name preceded by its inline logo and shown in its brand accent.
+ * When `href` is set the name becomes a link.
+ */
+export function Brand({ logo, color, href, big, children }: BrandProps) {
+  const inner = (
+    <>
       {logo && (
         <img
           src={logo}
@@ -25,6 +28,26 @@ export function Brand({ logo, color, big, children }: BrandProps) {
         />
       )}
       {children}
+    </>
+  )
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium underline-offset-2 hover:underline"
+        style={{ color }}
+      >
+        {inner}
+      </a>
+    )
+  }
+
+  return (
+    <span className="font-medium" style={{ color }}>
+      {inner}
     </span>
   )
 }
