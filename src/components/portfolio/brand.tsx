@@ -37,7 +37,7 @@ export function Brand({ logo, color, href, big, children }: BrandProps) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-medium underline-offset-2 hover:underline"
+        className="brand-link font-medium"
         style={{ color }}
       >
         {inner}

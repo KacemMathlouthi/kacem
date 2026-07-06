@@ -48,7 +48,11 @@ export const brands = {
     color: "#d16a6a",
     href: "https://insat.rnu.tn",
   },
-  animus: { logo: "/logos/animus.svg", color: "#e7b277" },
+  animus: {
+    logo: "/logos/animus.svg",
+    color: "#e7b277",
+    href: "https://github.com/KacemMathlouthi/animus",
+  },
   metis: {
     logo: "/logos/metis.svg",
     color: "#eab308",
