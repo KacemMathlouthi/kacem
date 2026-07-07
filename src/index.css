@@ -81,6 +81,11 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --contribution-empty: oklch(0 0 0 / 0.06);
+    --contribution-level-1: oklch(0.145 0 0 / 0.28);
+    --contribution-level-2: oklch(0.145 0 0 / 0.5);
+    --contribution-level-3: oklch(0.145 0 0 / 0.74);
+    --contribution-level-4: oklch(0.145 0 0);
 }
 
 .dark {
@@ -115,6 +120,11 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+    --contribution-empty: oklch(1 0 0 / 0.06);
+    --contribution-level-1: oklch(1 0 0 / 0.3);
+    --contribution-level-2: oklch(1 0 0 / 0.5);
+    --contribution-level-3: oklch(1 0 0 / 0.72);
+    --contribution-level-4: oklch(1 0 0 / 0.95);
 }
 
 @layer base {
@@ -161,6 +171,9 @@
   }
   .reveal > *:nth-child(3) {
     animation-delay: 0.27s;
+  }
+  .reveal > *:nth-child(4) {
+    animation-delay: 0.38s;
   }
 }
 
