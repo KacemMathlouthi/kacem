@@ -42,7 +42,7 @@ export function SocialLinks() {
   return (
     <nav
       aria-label="Social profiles"
-      className="mt-4 flex items-center justify-center gap-3"
+      className="mt-3 flex items-center justify-center gap-2.5"
     >
       {socials.map(({ label, href, Icon }) => (
         <AbhinavBentoButton
@@ -52,9 +52,9 @@ export function SocialLinks() {
           title={label}
           target="_blank"
           rel="noopener noreferrer"
-          className="grid size-11 place-items-center p-0"
+          className="grid size-10 place-items-center p-0"
         >
-          <Icon className="size-5 text-foreground" />
+          <Icon className="size-[1.15rem] text-foreground" />
         </AbhinavBentoButton>
       ))}
       <CopyEmailButton />

@@ -6,7 +6,7 @@ import { Highlight } from "./highlight"
 /** The narrative bio, one paragraph per chapter of experience. */
 export function Bio() {
   return (
-    <div className="flex flex-col gap-5 text-[1.0625rem] leading-[1.7rem] text-muted-foreground">
+    <div className="flex flex-col gap-4 text-[0.98rem] leading-[1.58rem] text-muted-foreground">
       <p>
         I&apos;m a <Highlight>software engineer</Highlight> at{" "}
         <Brand {...brands.callab}>Callab&nbsp;AI (YC&nbsp;P26)</Brand>, which I
