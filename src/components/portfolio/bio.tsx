@@ -47,11 +47,11 @@ export function Bio() {
       <p>
         On the research side, I have a paper under review at{" "}
         <Highlight>TMLR</Highlight>,{" "}
-        <span className="font-medium text-foreground italic">
+        <Brand {...brands.openreview} className="italic">
           &ldquo;Revisiting Generalization Measures Beyond IID: How Image
           Corruption and Perturbation Affect Robustness of Generalization
           Measures&rdquo;
-        </span>
+        </Brand>
         , which asks whether generalization measures that look reliable under
         IID evaluation still hold up when image classifiers face corruptions and
         perturbations.

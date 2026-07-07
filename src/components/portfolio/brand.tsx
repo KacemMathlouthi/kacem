@@ -7,6 +7,8 @@ import type { BrandStyle } from "@/lib/brands"
 type BrandProps = BrandStyle & {
   /** Render the logo larger (for marks that read small at 1em). */
   big?: boolean
+  /** Extra classes for the name (e.g. `italic`). */
+  className?: string
   children: ReactNode
 }
 
@@ -15,7 +17,7 @@ type BrandProps = BrandStyle & {
  * When `href` is set the name becomes a link that glows on hover and swaps
  * its logo for an arrow to signal the outbound link.
  */
-export function Brand({ logo, color, href, big, children }: BrandProps) {
+export function Brand({ logo, color, href, big, className, children }: BrandProps) {
   const size = big ? "h-[1.35em] w-[1.35em]" : "h-[1.05em] w-[1.05em]"
 
   if (href) {
@@ -24,7 +26,10 @@ export function Brand({ logo, color, href, big, children }: BrandProps) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="brand-link font-medium underline-offset-2 hover:underline"
+        className={cn(
+          "brand-link font-medium underline-offset-2 hover:underline",
+          className
+        )}
         style={{ color }}
       >
         {logo && (
@@ -47,7 +52,7 @@ export function Brand({ logo, color, href, big, children }: BrandProps) {
   }
 
   return (
-    <span className="font-medium" style={{ color }}>
+    <span className={cn("font-medium", className)} style={{ color }}>
       {logo && (
         <img
           src={logo}

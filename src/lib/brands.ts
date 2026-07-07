@@ -62,4 +62,9 @@ export const brands = {
     color: "#eab308",
     href: "https://github.com/KacemMathlouthi/metis",
   },
+  openreview: {
+    logo: "/logos/openreview.svg",
+    color: "var(--foreground)",
+    href: "https://openreview.net/forum?id=X4RoujAYnY",
+  },
 } satisfies Record<string, BrandStyle>
