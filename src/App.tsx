@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Intersection2 from "@/components/pixel-perfect/intersection2"
 import { Bio } from "@/components/portfolio/bio"
 import { Hero } from "@/components/portfolio/hero"
@@ -13,6 +14,7 @@ export function App() {
           <SocialLinks />
         </div>
       </Intersection2>
+      <SpeedInsights />
     </main>
   )
 }
