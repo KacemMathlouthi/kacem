@@ -31,9 +31,8 @@ const socials: Social[] = [
     Icon: XIcon,
   },
   {
-    // Drop a PDF at public/cv.pdf to enable this.
     label: "Résumé",
-    href: "/cv.pdf",
+    href: "/kacem-mathlouthi-resume.pdf",
     Icon: FileText,
   },
 ]
