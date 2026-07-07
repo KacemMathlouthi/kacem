@@ -27,7 +27,7 @@ export function Brand({ logo, color, href, big, className, children }: BrandProp
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          "brand-link font-medium underline-offset-2 hover:underline",
+          "brand-link font-medium whitespace-nowrap underline-offset-2 hover:underline",
           className
         )}
         style={{ color }}
@@ -52,7 +52,10 @@ export function Brand({ logo, color, href, big, className, children }: BrandProp
   }
 
   return (
-    <span className={cn("font-medium", className)} style={{ color }}>
+    <span
+      className={cn("font-medium whitespace-nowrap", className)}
+      style={{ color }}
+    >
       {logo && (
         <img
           src={logo}

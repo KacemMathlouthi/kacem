@@ -10,9 +10,9 @@ export function Bio() {
       <p>
         I&apos;m a <Highlight>software engineer</Highlight> at{" "}
         <Brand {...brands.callab}>Callab&nbsp;AI (YC&nbsp;P26)</Brand>, which I
-        joined before we got into{" "}
-        <Brand {...brands.yc}>Y&nbsp;Combinator</Brand> as a team, where I build
-        an <Highlight>AI voice agents platform</Highlight> for on-prem telephony
+        joined early and helped take through{" "}
+        <Brand {...brands.yc}>Y&nbsp;Combinator</Brand>, where I build an{" "}
+        <Highlight>AI voice agents platform</Highlight> for on-prem telephony
         that works with existing PBX, SBC, and contact center infrastructure,
         no migration needed.
       </p>
@@ -45,9 +45,9 @@ export function Bio() {
       </p>
 
       <p>
-        On the research side, I have a paper under review at{" "}
-        <Highlight>TMLR</Highlight>,{" "}
-        <Brand {...brands.openreview} className="italic">
+        On the research side, I have a paper under review for{" "}
+        <Highlight>TMLR</Highlight>, titled{" "}
+        <Brand {...brands.openreview} className="whitespace-normal italic">
           &ldquo;Revisiting Generalization Measures Beyond IID: How Image
           Corruption and Perturbation Affect Robustness of Generalization
           Measures&rdquo;
