@@ -63,6 +63,6 @@ public/
 
 ## Notes
 
-- The **résumé** button links to `/cv.pdf` — drop your PDF at `public/cv.pdf`
-  to enable it.
+- The **résumé** button links to `/kacem-mathlouthi-resume.pdf`, served from
+  `public/`.
 - Interactions respect `prefers-reduced-motion`.
