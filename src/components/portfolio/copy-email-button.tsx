@@ -9,8 +9,8 @@ const EMAIL = "kacem.mathlouthi@insat.ucar.tn"
 
 // Hoisted to module scope so each render passes the same element reference
 // to IconSwap instead of constructing brand-new JSX every time.
-const mailIcon = <Mail className="size-5 text-foreground" />
-const checkIcon = <Check className="size-5 text-foreground" />
+const mailIcon = <Mail className="size-[1.15rem] text-foreground" />
+const checkIcon = <Check className="size-[1.15rem] text-foreground" />
 
 /** Copies the email to the clipboard (falling back to a mailto link). */
 export function CopyEmailButton() {
@@ -32,7 +32,7 @@ export function CopyEmailButton() {
       onClick={handleClick}
       aria-label={copied ? "Email address copied" : "Copy email address"}
       title={copied ? "Copied!" : EMAIL}
-      className="grid size-11 place-items-center p-0"
+      className="grid size-10 place-items-center p-0"
     >
       <IconSwap
         state={copied ? "b" : "a"}
