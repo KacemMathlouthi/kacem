@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import Intersection2 from "@/components/pixel-perfect/intersection2"
 import { Bio } from "@/components/portfolio/bio"
@@ -15,6 +16,7 @@ export function App() {
         </div>
       </Intersection2>
       <SpeedInsights />
+      <Analytics />
     </main>
   )
 }
