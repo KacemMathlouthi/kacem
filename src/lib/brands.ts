@@ -20,14 +20,18 @@ export const brands = {
   yc: {
     logo: "/logos/yc.svg",
     color: "#fb651e",
-    href: "https://www.ycombinator.com",
+    href: "https://www.ycombinator.com/companies/callab-ai",
   },
   gsoc: {
     logo: "/logos/gsoc.svg",
     color: "#f59e0b",
-    href: "https://summerofcode.withgoogle.com",
+    href: "https://summerofcode.withgoogle.com/archive/2025/projects/vFE5LPKW",
   },
-  nrnb: { logo: "/logos/nrnb.svg", color: "var(--foreground)", href: "https://nrnb.org" },
+  nrnb: {
+    logo: "/logos/nrnb.svg",
+    color: "var(--foreground)",
+    href: "https://github.com/virtualcell/VCell-AI",
+  },
   orange: {
     logo: "/logos/orange.svg",
     color: "#f97316",
@@ -41,7 +45,7 @@ export const brands = {
   ieee: {
     logo: "/logos/ieee-cs.svg",
     color: "#2f6fed",
-    href: "https://www.computer.org",
+    href: "https://insat.ieee.tn/",
   },
   insat: {
     logo: "/logos/insat-seal.png",
