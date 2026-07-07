@@ -47,7 +47,7 @@ src/
       abhinav-bento-button.tsx# glossy bento surface (renders <a> or <button>)
 public/
   logos/                      # inline entity logos
-  favicon.svg
+  avatar.jpg                  # favicon + OG/Twitter share image
 ```
 
 ## Customizing
