@@ -9,9 +9,10 @@ export function Bio() {
     <div className="flex flex-col gap-4 text-[0.98rem] leading-[1.58rem] text-muted-foreground">
       <p>
         I&apos;m a <Highlight>software engineer</Highlight> at{" "}
-        <Brand {...brands.callab}>Callab&nbsp;AI (YC&nbsp;P26)</Brand>, which I
-        joined early and helped take through{" "}
-        <Brand {...brands.yc}>Y&nbsp;Combinator</Brand>, where I build an{" "}
+        <Brand {...brands.callab}>Callab&nbsp;AI (YC&nbsp;P26)</Brand>. I joined
+        before{" "}
+        <Brand {...brands.yc}>Y&nbsp;Combinator</Brand> and went through the
+        batch with the team, and I build an{" "}
         <Highlight>AI voice agents platform</Highlight> for on-prem telephony
         that works with existing PBX, SBC, and contact center infrastructure,
         no migration needed.
