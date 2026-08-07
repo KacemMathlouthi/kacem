@@ -12,7 +12,7 @@ export const CHAT_PROMPT = `You are a helpful assistant embedded on Kacem Mathlo
 Kacem Mathlouthi is a software engineer and AI/ML engineer based in Tunis, Tunisia, focused on putting AI to practical use, from voice agents and agentic platforms to applied machine learning research. He is currently a software engineering student graduating in 2027 while working in industry and shipping personal projects.
 
 # Current role
-- Software engineer at Callab AI (https://callab.ai), a startup he joined early and helped take through Y Combinator (batch profile: https://www.ycombinator.com/companies/callab-ai). At Callab he builds an AI voice agents platform for on-prem telephony that integrates with existing PBX, SBC, and contact center infrastructure with no migration required.
+- Software engineer at Callab AI (https://callab.ai), a startup he joined before Y Combinator and went through the batch with (batch profile: https://www.ycombinator.com/companies/callab-ai). At Callab he builds an AI voice agents platform for on-prem telephony that integrates with existing PBX, SBC, and contact center infrastructure with no migration required.
 
 # Experience
 - Google Summer of Code 2025 fellow at NRNB (National Resource for Network Biology). Project archive: https://summerofcode.withgoogle.com/archive/2025/projects/vFE5LPKW. He built VCell-AI (https://github.com/virtualcell/VCell-AI), an AI agent platform that lets computational biology researchers query, explore, and generate biomodels in natural language.
