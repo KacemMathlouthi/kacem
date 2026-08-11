@@ -55,7 +55,7 @@ export const brands = {
   animus: {
     logo: "/logos/animus.svg",
     color: "#e7b277",
-    href: "https://github.com/KacemMathlouthi/animus",
+    href: "https://tryanimus.app/",
   },
   metis: {
     logo: "/logos/metis.svg",
