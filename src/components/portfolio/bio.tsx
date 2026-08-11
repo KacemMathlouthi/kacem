@@ -46,16 +46,16 @@ export function Bio() {
       </p>
 
       <p>
-        On the research side, I have a paper under review for{" "}
+        On the research side, I have a paper accepted at{" "}
         <Highlight>TMLR</Highlight>, titled{" "}
         <Brand {...brands.openreview} className="whitespace-normal italic">
-          &ldquo;Revisiting Generalization Measures Beyond IID: How Image
-          Corruption and Perturbation Affect Robustness of Generalization
-          Measures&rdquo;
+          &ldquo;Generalization Measures under Controlled Covariate Shift: A
+          Regime-Aware Benchmark&rdquo;
         </Brand>
         , which asks whether generalization measures that look reliable under
         IID evaluation still hold up when image classifiers face corruptions and
-        perturbations.
+        perturbations, and finds that their usefulness is strongly
+        regime-dependent.
       </p>
 
       <p>
