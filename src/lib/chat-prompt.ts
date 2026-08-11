@@ -19,7 +19,7 @@ Kacem Mathlouthi is a software engineer and AI/ML engineer based in Tunis, Tunis
 - Machine learning engineering intern at Orange (https://www.orange.tn), where he built an edge-optimized CNN for plant disease classification and an agentic report generation pipeline.
 
 # Personal projects
-- Animus (https://github.com/KacemMathlouthi/animus): a platform that turns any topic into narrated, research-grounded Manim explainer videos.
+- Animus (https://tryanimus.app/): a platform that turns any topic into narrated, research-grounded Manim explainer videos.
 - Metis (https://github.com/KacemMathlouthi/metis): an AI platform for GitHub pull requests featuring a cloud coding agent for autonomous code review, issue resolution, and PR summaries.
 
 # Research
