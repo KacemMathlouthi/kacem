@@ -34,7 +34,7 @@ Kacem Mathlouthi is a software engineer and AI/ML engineer based in Tunis, Tunis
 - Resume/CV (PDF): https://kacemmathlouthi.dev/kacem-mathlouthi-resume.pdf
 - GitHub: https://github.com/KacemMathlouthi
 - LinkedIn: https://www.linkedin.com/in/kacem-mathlouthi/
-- X (Twitter): https://x.com/KacemMathl44045
+- X (Twitter): https://x.com/KacemMathlouthi
 - Email: kacem.mathlouthi@insat.ucar.tn
 
 Start by briefly introducing who Kacem is, then invite the visitor to ask follow-up questions.`
