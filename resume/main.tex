@@ -1,3 +1,7 @@
+\DocumentMetadata{
+    lang=en-US,
+    testphase=phase-I
+}
 \documentclass[10pt, letterpaper]{article}
 
 % Packages:
@@ -30,7 +34,6 @@
 \usepackage{bookmark} % for bookmarks
 \usepackage{lastpage} % for getting the total number of pages
 \usepackage{changepage} % for one column entries (adjustwidth environment)
-\usepackage{paracol} % for two and three column entries
 \usepackage{ifthen} % for conditional statements
 \usepackage{needspace} % for avoiding page brake right after the section title
 \usepackage{iftex} % check if engine is pdflatex, xetex or luatex
@@ -108,17 +111,19 @@
         0.2 cm + 0.00001 cm
     }
 }{
+    \par
     \end{adjustwidth}
 } % new environment for one column entries
 
 \newenvironment{twocolentry}[2][]{
     \onecolentry
     \def\secondColumn{#2}
-    \setcolumnwidth{\fill, 4.5 cm}
-    \begin{paracol}{2}
+    \begin{minipage}[t]{\dimexpr\linewidth-4.7cm\relax}
 }{
-    \switchcolumn \raggedleft \secondColumn
-    \end{paracol}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{4.5cm}
+        \raggedleft \secondColumn
+    \end{minipage}
     \endonecolentry
 } % new environment for two column entries
 
@@ -139,11 +144,8 @@
   }%
 }%
 
-% save the original href command in a new command:
+% Keep an alias for links whose visible text is styled manually.
 \let\hrefWithoutArrow\href
-
-% new command for external links:
-\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
 
 
 \begin{document}
@@ -173,6 +175,10 @@
         \AND%
         \kern 0.2 cm%
         \mbox{\hrefWithoutArrow{https://github.com/KacemMathlouthi}{\color{black}{\footnotesize\faGithub}\hspace*{0.1cm}KacemMathlouthi}}%
+        \kern 0.2 cm%
+        \AND%
+        \kern 0.2 cm%
+        \mbox{\hrefWithoutArrow{https://kacemmathlouthi.dev}{\color{black}{\footnotesize\faGlobe}\hspace*{0.1cm}kacemmathlouthi.dev}}%
     \end{header}
 
     \input{sections/education}

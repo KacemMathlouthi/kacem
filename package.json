@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "node scripts/fetch-github.mjs && tsc -b && vite build",
+    "build:resume": "bash scripts/build-resume.sh",
     "fetch:github": "node scripts/fetch-github.mjs",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
