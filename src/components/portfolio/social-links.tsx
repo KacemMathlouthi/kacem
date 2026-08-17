@@ -27,7 +27,7 @@ const socials: Social[] = [
   },
   {
     label: "X",
-    href: "https://x.com/KacemMathl44045",
+    href: "https://x.com/KacemMathlouthi",
     Icon: XIcon,
   },
   {
