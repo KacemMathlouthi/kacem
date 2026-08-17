@@ -2,15 +2,15 @@
     lang=en-US,
     testphase=phase-I
 }
-\documentclass[10pt, letterpaper]{article}
+\documentclass[9pt, letterpaper]{extarticle}
 
 % Packages:
 \usepackage[
     ignoreheadfoot,
-    top=0.8cm, % reduced top margin
-    bottom=1.cm, % reduced bottom margin
-    left=0.5cm, % reduced left margin
-    right=0.5cm, % reduced right margin
+    top=0.8cm,
+    bottom=0.8cm,
+    left=1cm,
+    right=1cm,
     footskip=0cm, % reduced foot separation
 ]{geometry}
 
@@ -65,17 +65,17 @@
 %\makeatother
 %\pagestyle{customFooterStyle}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{2pt}\titlerule]
 
 \titlespacing{\section}{
     % left space:
     -1pt
 }{
     % top space:
-    0.09 cm
+    0.12 cm
 }{
     % bottom space:
-    0.09 cm
+    0.13 cm
 } % section title spacing
 
 \renewcommand\labelitemi{$\circ$} % custom bullet points
@@ -163,21 +163,21 @@
 
         \normalsize
         \mbox{\hrefWithoutArrow{mailto:kacem.mathlouthi@insat.ucar.tn}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.1cm}kacem.mathlouthi@insat.ucar.tn}}%
-        \kern 0.2 cm%
+        \kern 0.15 cm%
         \AND%
-        \kern 0.2 cm%
+        \kern 0.15 cm%
         \mbox{\hrefWithoutArrow{tel:+216-52-387-938}{\color{black}{\footnotesize\faPhone*}\hspace*{0.1cm}+216 52 387 938}}%
-        \kern 0.2 cm%
+        \kern 0.15 cm%
         \AND%
-        \kern 0.2 cm%
+        \kern 0.15 cm%
         \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/kacem-mathlouthi/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.1cm}kacem-mathlouthi}}%
-        \kern 0.2 cm%
+        \kern 0.15 cm%
         \AND%
-        \kern 0.2 cm%
+        \kern 0.15 cm%
         \mbox{\hrefWithoutArrow{https://github.com/KacemMathlouthi}{\color{black}{\footnotesize\faGithub}\hspace*{0.1cm}KacemMathlouthi}}%
-        \kern 0.2 cm%
+        \kern 0.15 cm%
         \AND%
-        \kern 0.2 cm%
+        \kern 0.15 cm%
         \mbox{\hrefWithoutArrow{https://kacemmathlouthi.dev}{\color{black}{\footnotesize\faGlobe}\hspace*{0.1cm}kacemmathlouthi.dev}}%
     \end{header}
 
@@ -186,6 +186,7 @@
     \input{sections/publications}
     \input{sections/projects}
     \input{sections/achievements}
+    \input{sections/leadership}
     \input{sections/technologies}
 
 \end{document}
