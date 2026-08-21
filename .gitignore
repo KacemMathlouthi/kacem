@@ -29,4 +29,5 @@ resume-bullets.md
 # Playwright MCP (snapshots + screenshots)
 .playwright-mcp/
 page-*.png
+random-*.png
 /404.png
