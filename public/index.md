@@ -34,9 +34,9 @@ report generation pipeline.
 
 ## Projects
 
-- **[Animus](https://tryanimus.app/)** — a platform that turns any topic into
+- **[Animus](https://tryanimus.app/)**: a platform that turns any topic into
   narrated, research-grounded Manim explainer videos.
-- **[Metis](https://github.com/KacemMathlouthi/metis)** — an AI platform for
+- **[Metis](https://github.com/KacemMathlouthi/metis)**: an AI platform for
   GitHub pull requests, with a cloud coding agent for autonomous code review,
   issue resolution, and PR summaries.
 
