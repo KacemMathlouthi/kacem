@@ -20,9 +20,27 @@ ${url("/kacem-mathlouthi-resume.pdf", "0.5")}
 `
 }
 
+const NOT_FOUND_SHELL = `<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>404 · Kacem Mathlouthi</title>
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/jpeg" href="/avatar.jpg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-404.tsx"></script>
+  </body>
+</html>
+`
+
 /**
- * Owns /sitemap.xml: emitted into the bundle at build time, and served live by
- * the dev server so the two behave the same.
+ * Keeps the dev server honest about two things production does but Vite does
+ * not: serving /sitemap.xml, and answering unknown paths with the real 404
+ * page and a real 404 status.
  */
 function agentRoutes(): Plugin {
   let isSsrBuild = false
@@ -50,12 +68,46 @@ function agentRoutes(): Plugin {
         res.setHeader("Content-Type", "application/xml; charset=utf-8")
         res.end(buildSitemap())
       })
+
+      // This runs ahead of Vite's index-html middleware, so it has to let the
+      // real page through itself. The site is one page.
+      const PAGES = new Set(["/", "/index.html"])
+
+      return () => {
+        server.middlewares.use(async (req, res, next) => {
+          if (!req.headers.accept?.includes("text/html")) return next()
+          const pathname = (req.url ?? "/").split("?")[0]
+          if (PAGES.has(pathname)) return next()
+          // A missing file with an extension (favicon.ico, an image, a PDF) is
+          // a missing *file*: 404 it plainly rather than handing back a page.
+          if (/\.[^/]+$/.test(pathname) && !pathname.endsWith(".html")) {
+            res.statusCode = 404
+            res.setHeader("Content-Type", "text/plain; charset=utf-8")
+            res.end("404 Not Found\n")
+            return
+          }
+          try {
+            const html = await server.transformIndexHtml(
+              req.url ?? "/",
+              NOT_FOUND_SHELL
+            )
+            res.statusCode = 404
+            res.setHeader("Content-Type", "text/html; charset=utf-8")
+            res.end(html)
+          } catch (err) {
+            next(err)
+          }
+        })
+      }
     },
   }
 }
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Without this, Vite rewrites every unknown path to index.html with a 200,
+  // which is exactly the "every path exists" behaviour agents get punished for.
+  appType: "mpa",
   plugins: [react(), tailwindcss(), agentRoutes()],
   resolve: {
     alias: {
