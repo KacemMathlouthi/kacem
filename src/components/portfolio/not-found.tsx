@@ -26,7 +26,7 @@ const AGENT_MARKDOWN = [
 export function NotFound() {
   return (
     <main className="w-full">
-      <Intersection2>
+      <Intersection2 className="max-w-xl">
         <div className="reveal flex flex-col items-center gap-5 px-6 py-10 text-center sm:px-8">
           <div className="flex flex-col items-center gap-3">
             <span className="text-xs font-medium tracking-[0.2em] text-muted-foreground uppercase">
@@ -37,11 +37,29 @@ export function NotFound() {
             </h1>
           </div>
 
-          <p className="max-w-prose text-[0.98rem] leading-[1.58rem] text-muted-foreground">
-            Nothing lives at this address. The site is a single page, so the
-            bio, the projects, the paper, and the links are all one click away
-            on the home page.
+          <p className="text-[0.98rem] leading-[1.58rem] text-muted-foreground">
+            Nothing lives at this address.
           </p>
+
+          {/*
+            cataas.com returns a different cat per request, so the page stays
+            random without shipping a line of JavaScript. Only a width is
+            requested, at 2x for sharpness, and the shape it comes back in is
+            the shape it gets: no frame, no crop.
+          */}
+          <figure className="w-full max-w-lg">
+            <div className="aspect-square w-full">
+              <img
+                src="https://cataas.com/cat?width=900"
+                alt="A random cat"
+                decoding="async"
+                className="size-full rounded-xl object-contain"
+              />
+            </div>
+            <figcaption className="mt-2.5 text-xs text-muted-foreground">
+              Page not found. Cat found.
+            </figcaption>
+          </figure>
 
           <nav
             aria-label="Recovery links"
