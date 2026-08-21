@@ -47,15 +47,18 @@ export function NotFound() {
             requested, at 2x for sharpness, and the shape it comes back in is
             the shape it gets: no frame, no crop.
           */}
-          <figure className="w-full max-w-lg">
-            <div className="aspect-square w-full">
-              <img
-                src="https://cataas.com/cat?width=900"
-                alt="A random cat"
-                decoding="async"
-                className="size-full rounded-xl object-contain"
-              />
-            </div>
+          {/*
+            No frame around the image: it is sized to its own shape, bounded by
+            a max height, so the line above and the caption below both sit
+            directly against the cat whatever proportions it arrives in.
+          */}
+          <figure className="flex w-full max-w-lg flex-col items-center">
+            <img
+              src="https://cataas.com/cat?width=900"
+              alt="A random cat"
+              decoding="async"
+              className="max-h-128 w-auto max-w-full rounded-xl"
+            />
             <figcaption className="mt-2.5 text-xs text-muted-foreground">
               Page not found. Cat found.
             </figcaption>
