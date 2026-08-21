@@ -25,3 +25,8 @@ dist-ssr
 
 # Scratch
 resume-bullets.md
+
+# Playwright MCP (snapshots + screenshots)
+.playwright-mcp/
+page-*.png
+/404.png
