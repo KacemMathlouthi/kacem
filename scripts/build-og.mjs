@@ -1,4 +1,4 @@
-// Generates public/__og.html — a 1200x630 card rendered to public/og.png by
+// Generates public/__og.html, a 1200x630 card rendered to public/og.png by
 // Playwright, then deleted. Run indirectly via the OG build steps.
 import { readFileSync, writeFileSync } from "fs"
 
