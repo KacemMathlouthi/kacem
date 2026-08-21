@@ -1,0 +1,5 @@
+# https://kacemmathlouthi.dev
+User-agent: *
+Allow: /
+
+Sitemap: https://kacemmathlouthi.dev/sitemap.xml
