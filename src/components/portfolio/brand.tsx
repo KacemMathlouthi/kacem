@@ -12,12 +12,16 @@ type BrandProps = BrandStyle & {
   children: ReactNode
 }
 
-/**
- * An entity name preceded by its inline logo and shown in its brand accent.
- * When `href` is set the name becomes a link that glows on hover and swaps
- * its logo for an arrow to signal the outbound link.
- */
-export function Brand({ logo, color, href, big, className, children }: BrandProps) {
+// An entity name with its inline logo, in its brand accent. With `href` it
+// becomes a link that glows on hover and swaps the logo for an arrow.
+export function Brand({
+  logo,
+  color,
+  href,
+  big,
+  className,
+  children,
+}: BrandProps) {
   const size = big ? "h-[1.35em] w-[1.35em]" : "h-[1.05em] w-[1.05em]"
 
   if (href) {

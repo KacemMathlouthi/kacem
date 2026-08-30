@@ -7,10 +7,7 @@ import {
 } from "@/components/ui/contribution-graph"
 import github from "@/data/github.json"
 
-/**
- * A GitHub-style contribution heatmap for the last year. Data is fetched at
- * build time into `src/data/github.json` (see scripts/fetch-github.mjs).
- */
+// GitHub-style contribution heatmap, fed by src/data/github.json.
 export function Contributions() {
   const data = github.contributions as ContributionData[]
 

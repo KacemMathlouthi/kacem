@@ -6,3 +6,6 @@ package-lock.json
 pnpm-lock.yaml
 yarn.lock
 LICENSE
+
+# Generated, written minified by scripts/fetch-github.mjs
+src/data/github.json

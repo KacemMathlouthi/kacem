@@ -1,9 +1,5 @@
-// Renders the app to static HTML at build time and injects it into
-// dist/index.html, so crawlers and AI agents that do not execute JavaScript
-// still see the full bio. The client hydrates that markup (see src/main.tsx).
-//
-// Also writes dist/404.html. (The sitemap is emitted by the agent-routes
-// plugin in vite.config.ts, which serves it in dev too.)
+// Renders the app into dist/index.html (and dist/404.html) at build time so
+// crawlers that skip JavaScript still see the bio. The client hydrates it.
 import { readFileSync, writeFileSync } from "fs"
 import { pathToFileURL } from "url"
 
@@ -21,9 +17,7 @@ if (!html.includes(marker)) {
 
 writeFileSync(HTML, html.replace(marker, `<div id="root">${app}</div>`))
 
-// The 404 page is the same components and the same stylesheet, but ships no
-// JavaScript: Vercel serves dist/404.html for unknown paths with a real 404
-// status, and nothing on it needs to hydrate.
+// Same components and stylesheet, but no JavaScript: nothing here hydrates.
 const stylesheet = html.match(/<link rel="stylesheet"[^>]*href="([^"]+)"[^>]*>/)
 if (!stylesheet) {
   throw new Error(`[prerender] could not find the stylesheet link in ${HTML}`)

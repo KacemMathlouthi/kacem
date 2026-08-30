@@ -1,7 +1,6 @@
 import type { CSSProperties } from "react"
 
-// Shared look + interaction for the bento surface, minus shape/padding so
-// callers can be a circle (icon button) or a pill (text button).
+// Shared bento surface, minus shape/padding so callers can be circle or pill.
 export const bentoSurfaceClassName =
   "rounded-full transition-transform duration-200 ease-out hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 

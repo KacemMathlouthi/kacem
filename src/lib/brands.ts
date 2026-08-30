@@ -7,10 +7,7 @@ export type BrandStyle = {
   href?: string
 }
 
-/**
- * Brand accents for each organization / project mentioned in the bio.
- * Colors are brand-pastel and tuned for the dark theme.
- */
+// Accents for each org/project in the bio, tuned for the dark theme.
 export const brands = {
   callab: {
     logo: "/logos/callab.png",
