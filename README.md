@@ -66,3 +66,11 @@ public/
 - The **résumé** button links to `/kacem-mathlouthi-resume.pdf`, served from
   `public/`.
 - Interactions respect `prefers-reduced-motion`.
+
+## License
+
+The code is [MIT licensed](LICENSE).
+
+The brand marks in `public/logos/` and the personal content (avatar, résumé,
+bio copy, and the OG image) are excluded: those belong to their respective
+owners and are not covered by the MIT grant.
