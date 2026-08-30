@@ -10,12 +10,11 @@ export function Bio() {
       <p>
         I&apos;m a <Highlight>software engineer</Highlight> at{" "}
         <Brand {...brands.callab}>Callab&nbsp;AI (YC&nbsp;P26)</Brand>. I joined
-        before{" "}
-        <Brand {...brands.yc}>Y&nbsp;Combinator</Brand> and went through the
-        batch with the team, and I build an{" "}
+        before <Brand {...brands.yc}>Y&nbsp;Combinator</Brand> and went through
+        the batch with the team, and I build an{" "}
         <Highlight>AI voice agents platform</Highlight> for on-prem telephony
-        that works with existing PBX, SBC, and contact center infrastructure,
-        no migration needed.
+        that works with existing PBX, SBC, and contact center infrastructure, no
+        migration needed.
       </p>
 
       <p>
@@ -23,8 +22,8 @@ export function Bio() {
         <Brand {...brands.gsoc}>Google Summer of Code&nbsp;&apos;25</Brand>{" "}
         fellow at <Brand {...brands.nrnb}>NRNB</Brand>, where I built{" "}
         <Highlight>VCell-AI</Highlight>, an AI agent platform that lets
-        computational biology researchers query, explore, and generate
-        biomodels in natural language.
+        computational biology researchers query, explore, and generate biomodels
+        in natural language.
       </p>
 
       <p>

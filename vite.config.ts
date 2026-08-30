@@ -37,11 +37,8 @@ const NOT_FOUND_SHELL = `<!doctype html>
 </html>
 `
 
-/**
- * Keeps the dev server honest about two things production does but Vite does
- * not: serving /sitemap.xml, and answering unknown paths with the real 404
- * page and a real 404 status.
- */
+// Gives the dev server what production does: /sitemap.xml, and unknown paths
+// answered with the real 404 page and a real 404 status.
 function agentRoutes(): Plugin {
   let isSsrBuild = false
 
@@ -69,8 +66,8 @@ function agentRoutes(): Plugin {
         res.end(buildSitemap())
       })
 
-      // This runs ahead of Vite's index-html middleware, so it has to let the
-      // real page through itself. The site is one page.
+      // Runs ahead of Vite's index-html middleware, so it must pass the real
+      // page through itself. The site is one page.
       const PAGES = new Set(["/", "/index.html"])
 
       return () => {
@@ -78,8 +75,8 @@ function agentRoutes(): Plugin {
           if (!req.headers.accept?.includes("text/html")) return next()
           const pathname = (req.url ?? "/").split("?")[0]
           if (PAGES.has(pathname)) return next()
-          // A missing file with an extension (favicon.ico, an image, a PDF) is
-          // a missing *file*: 404 it plainly rather than handing back a page.
+          // A missing file with an extension is a missing file: 404 it
+          // plainly rather than handing back a page.
           if (/\.[^/]+$/.test(pathname) && !pathname.endsWith(".html")) {
             res.statusCode = 404
             res.setHeader("Content-Type", "text/plain; charset=utf-8")
@@ -105,8 +102,7 @@ function agentRoutes(): Plugin {
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Without this, Vite rewrites every unknown path to index.html with a 200,
-  // which is exactly the "every path exists" behaviour agents get punished for.
+  // Without this, Vite rewrites every unknown path to index.html with a 200.
   appType: "mpa",
   plugins: [react(), tailwindcss(), agentRoutes()],
   resolve: {

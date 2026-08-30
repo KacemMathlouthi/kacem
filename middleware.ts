@@ -1,11 +1,7 @@
 import { next, rewrite } from "@vercel/edge"
 
-/**
- * Serves the homepage as markdown to clients that ask for it
- * (acceptmarkdown.com), which a rewrite rule in vercel.json cannot do: Vercel
- * checks the filesystem before applying rewrites, so `/` always resolved to
- * index.html and the rule never ran. Middleware runs first.
- */
+// Serves the homepage as markdown to clients that ask for it. A vercel.json
+// rewrite cannot: Vercel checks the filesystem first, so `/` always won.
 export const config = { matcher: "/" }
 
 export default function middleware(request: Request) {

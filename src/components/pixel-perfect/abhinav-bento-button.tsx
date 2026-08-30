@@ -16,10 +16,7 @@ type ButtonProps = BaseProps &
 type AnchorProps = BaseProps &
   AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }
 
-/**
- * Renders as an anchor when `href` is provided (so links stay real links),
- * otherwise as a button. Both share the same glossy bento surface.
- */
+// An anchor when `href` is set, otherwise a button. Same bento surface.
 export default function AbhinavBentoButton({
   className,
   children,

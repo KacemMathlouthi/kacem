@@ -1,68 +1,20 @@
-# portfolio-kacem
+<h1 align="center">Kacem Mathlouthi</h1>
 
-Kacem Mathlouthi's personal one-page portfolio — a single, dark, centered bio
-with brand logos, quick links, and a few small interactions.
+<p align="center">
+  <a href="https://kacemmathlouthi.dev">
+    <img src="public/og.png" alt="Kacem Mathlouthi, building at Callab AI (YC P26), software engineering student at INSAT." width="640">
+  </a>
+</p>
 
-## Stack
+<p align="center">
+  <a href="https://kacemmathlouthi.dev"><img alt="Website" src="https://img.shields.io/badge/Website-0A0A0A?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8%2BPHBhdGggZD0iTTEyIDJhMTQuNSAxNC41IDAgMCAwIDAgMjAgMTQuNSAxNC41IDAgMCAwIDAtMjAiLz48cGF0aCBkPSJNMiAxMmgyMCIvPjwvc3ZnPg%3D%3D"></a>
+  <a href="https://github.com/KacemMathlouthi"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-0A0A0A?style=for-the-badge&logo=github&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/kacem-mathlouthi/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A0A0A?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjUgMHoiLz48L3N2Zz4%3D"></a>
+  <a href="https://x.com/KacemMathlouthi"><img alt="X" src="https://img.shields.io/badge/X-0A0A0A?style=for-the-badge&logo=x&logoColor=white"></a>
+  <a href="https://kacemmathlouthi.dev/kacem-mathlouthi-resume.pdf"><img alt="Résumé" src="https://img.shields.io/badge/R%C3%A9sum%C3%A9-0A0A0A?style=for-the-badge&logo=readdotcv&logoColor=white"></a>
+  <a href="mailto:kacem.mathlouthi@insat.ucar.tn"><img alt="Email" src="https://img.shields.io/badge/Email-0A0A0A?style=for-the-badge&logo=maildotru&logoColor=white"></a>
+</p>
 
-- **React 19** + **TypeScript** + **Vite**
-- **Tailwind CSS v4** (design tokens in `src/index.css`)
-- **shadcn/ui** conventions with **Base UI** primitives
-- **lucide-react** icons, **Geist** variable font
-- **Bun** for install/scripts
-
-## Development
-
-```bash
-bun install
-bun run dev        # start the dev server
-bun run build      # type-check + production build
-bun run lint       # eslint
-bun run format     # prettier
-bun run typecheck  # tsc --noEmit
-```
-
-## Project structure
-
-```
-src/
-  App.tsx                     # composition: Hero + Bio + SocialLinks in the frame
-  main.tsx                    # entry point
-  index.css                   # Tailwind, theme tokens, and custom animations
-  lib/
-    brands.ts                 # per-entity logo + accent color + link (single source)
-    utils.ts                  # cn() helper
-  components/
-    portfolio/
-      hero.tsx                # the heading
-      bio.tsx                 # the narrative paragraphs
-      brand.tsx               # entity name: inline logo + accent + optional link
-      highlight.tsx           # white-emphasis inline term
-      social-links.tsx        # GitHub / LinkedIn / X / résumé + copy-email
-      copy-email-button.tsx   # copy-to-clipboard with mailto fallback
-      icon-swap.tsx           # blur + scale crossfade between two icons
-    icons/                    # inline brand glyphs (lucide dropped these)
-    pixel-perfect/            # third-party registry components
-      intersection2.tsx       # the framing rails around the content
-      abhinav-bento-button.tsx# glossy bento surface (renders <a> or <button>)
-public/
-  logos/                      # inline entity logos
-  avatar.jpg                  # favicon + OG/Twitter share image
-```
-
-## Customizing
-
-- **Text** — edit the paragraphs in `src/components/portfolio/bio.tsx`. Wrap a
-  key term in `<Highlight>` (white) or an entity in `<Brand {...brands.x}>`.
-- **Brands** — add/adjust logos, accent colors, and links in `src/lib/brands.ts`.
-  Drop a new logo in `public/logos/` and reference it there.
-- **Links** — edit the `socials` array in
-  `src/components/portfolio/social-links.tsx`.
-- **Theme** — the app is locked to dark via `class="dark"` on `<html>`; the
-  color tokens (including the unused light palette) live in `src/index.css`.
-
-## Notes
-
-- The **résumé** button links to `/kacem-mathlouthi-resume.pdf`, served from
-  `public/`.
-- Interactions respect `prefers-reduced-motion`.
+<p align="center">
+  <sub>Code is <a href="LICENSE">MIT</a>. The brand marks in <code>public/logos/</code> and the personal content (avatar, résumé, bio copy, OG image) are not.</sub>
+</p>
