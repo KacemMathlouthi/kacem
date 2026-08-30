@@ -149,7 +149,7 @@
 /* Subtle staggered entrance for the main sections (heading, bio, links). */
 @keyframes fade-rise {
   from {
-    opacity: 0;
+    opacity: 0.01;
     transform: translateY(8px);
   }
   to {
@@ -160,7 +160,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .reveal > * {
-    opacity: 0;
+    /* Not 0: Chrome excludes fully transparent elements from First Contentful
+       Paint and Largest Contentful Paint, and never reconsiders them once the
+       animation fades them in. Since every block of content on the page is a
+       direct child here, a literal 0 leaves Lighthouse with no LCP candidate
+       at all (NO_LCP). 0.01 is visually identical and keeps them eligible. */
+    opacity: 0.01;
     animation: fade-rise 0.5s ease forwards;
   }
   .reveal > *:nth-child(1) {
