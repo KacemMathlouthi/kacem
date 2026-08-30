@@ -1,5 +1,5 @@
-// Generates public/__og.html, a 1200x630 card rendered to public/og.png by
-// Playwright, then deleted. Run indirectly via the OG build steps.
+// Generates public/__og.html, a 1200x630 card that Playwright renders to
+// public/og.png and then deletes.
 import { readFileSync, writeFileSync } from "fs"
 
 const font = readFileSync(

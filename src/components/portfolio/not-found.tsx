@@ -18,11 +18,8 @@ const AGENT_MARKDOWN = [
   "Contact: kacem.mathlouthi@insat.ucar.tn",
 ].join("\n")
 
-/**
- * The 404 page, prerendered to `dist/404.html` at build time (see
- * scripts/prerender.mjs) and served by Vercel with a real 404 status. It ships
- * no JavaScript, so everything here has to work as static markup.
- */
+// Prerendered to dist/404.html at build time and served with a real 404
+// status. Ships no JavaScript, so it must work as static markup.
 export function NotFound() {
   return (
     <main className="w-full">
@@ -41,17 +38,8 @@ export function NotFound() {
             Nothing lives at this address.
           </p>
 
-          {/*
-            cataas.com returns a different cat per request, so the page stays
-            random without shipping a line of JavaScript. Only a width is
-            requested, at 2x for sharpness, and the shape it comes back in is
-            the shape it gets: no frame, no crop.
-          */}
-          {/*
-            No frame around the image: it is sized to its own shape, bounded by
-            a max height, so the line above and the caption below both sit
-            directly against the cat whatever proportions it arrives in.
-          */}
+          {/* cataas.com returns a different cat per request, so the page
+              stays random with no JavaScript. No frame, no crop. */}
           <figure className="flex w-full max-w-lg flex-col items-center">
             <img
               src="https://cataas.com/cat?width=900"
@@ -94,11 +82,8 @@ export function NotFound() {
             </AbhinavBentoButton>
           </nav>
 
-          {/*
-            Recovery instructions for agents that follow a dead link. Never
-            shown to people, but `hidden` keeps it as real text in the markup,
-            so anything reading the HTML still finds it.
-          */}
+          {/* Recovery instructions for agents on a dead link. `hidden` keeps
+              it out of view but real in the markup. */}
           <div hidden>
             <pre>{AGENT_MARKDOWN}</pre>
           </div>

@@ -1,11 +1,5 @@
-/**
- * Prompt handed to the chosen AI provider by the "Open in chat" button.
- *
- * It embeds a detailed, fully-linked bio as context so the model answers from
- * real facts (Kacem isn't in any model's training data) and can follow the
- * links or search the web to go deeper. Keep it in sync with the narrative in
- * `components/portfolio/bio.tsx` and the links in `lib/brands.ts`.
- */
+// Context for the "Open in chat" button, so the model answers from real facts.
+// Keep in sync with bio.tsx and brands.ts.
 export const CHAT_PROMPT = `You are a helpful assistant embedded on Kacem Mathlouthi's personal portfolio (https://kacemmathlouthi.dev). A visitor just opened you to learn about him. Use the detailed context below to answer their questions about Kacem. You may also browse the web or open any of the links to verify and expand on this information. Be concise, accurate, and friendly, and if you're asked something the context and sources don't cover, say so honestly rather than inventing details.
 
 # Who is Kacem Mathlouthi

@@ -7,8 +7,7 @@ import { IconSwap } from "./icon-swap"
 
 const EMAIL = "kacem.mathlouthi@insat.ucar.tn"
 
-// Hoisted to module scope so each render passes the same element reference
-// to IconSwap instead of constructing brand-new JSX every time.
+// Hoisted so every render hands IconSwap the same element reference.
 const mailIcon = <Mail className="size-[1.15rem] text-foreground" />
 const checkIcon = <Check className="size-[1.15rem] text-foreground" />
 
@@ -34,11 +33,7 @@ export function CopyEmailButton() {
       title={copied ? "Copied!" : EMAIL}
       className="grid size-10 place-items-center p-0"
     >
-      <IconSwap
-        state={copied ? "b" : "a"}
-        iconA={mailIcon}
-        iconB={checkIcon}
-      />
+      <IconSwap state={copied ? "b" : "a"} iconA={mailIcon} iconB={checkIcon} />
     </AbhinavBentoButton>
   )
 }

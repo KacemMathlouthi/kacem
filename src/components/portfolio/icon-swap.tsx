@@ -1,9 +1,7 @@
 import type { ReactNode } from "react"
 
-/**
- * Crossfades (blur + scale) between two stacked icons based on `state`.
- * Styles live under `.t-icon-swap` in index.css. Adapted from Transitions.dev.
- */
+// Crossfades (blur + scale) between two stacked icons. Styles live under
+// `.t-icon-swap` in index.css. Adapted from Transitions.dev.
 export function IconSwap({
   state,
   iconA,
