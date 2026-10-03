@@ -1,4 +1,5 @@
 import type { ComponentType } from "react"
+import { pageview } from "@vercel/analytics"
 import { FileText } from "lucide-react"
 
 import AbhinavBentoButton from "@/components/pixel-perfect/abhinav-bento-button"
@@ -12,6 +13,8 @@ type Social = {
   label: string
   href: string
   Icon: ComponentType<{ className?: string }>
+  /** Logged as a Vercel Analytics page view on click, so it counts on the free plan. */
+  view?: string
 }
 
 const socials: Social[] = [
@@ -34,6 +37,7 @@ const socials: Social[] = [
     label: "Résumé",
     href: "/kacem-mathlouthi-resume.pdf",
     Icon: FileText,
+    view: "/resume",
   },
 ]
 
@@ -44,7 +48,7 @@ export function SocialLinks() {
       aria-label="Social profiles"
       className="mt-3 flex items-center justify-center gap-2.5"
     >
-      {socials.map(({ label, href, Icon }) => (
+      {socials.map(({ label, href, Icon, view }) => (
         <AbhinavBentoButton
           key={label}
           href={href}
@@ -52,6 +56,9 @@ export function SocialLinks() {
           title={label}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={
+            view ? () => pageview({ route: view, path: view }) : undefined
+          }
           className="grid size-10 place-items-center p-0"
         >
           <Icon className="size-[1.15rem] text-foreground" />
