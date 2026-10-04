@@ -21,7 +21,6 @@
 \definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
 \usepackage{enumitem} % for customizing lists
 \usepackage{fontawesome5} % for using icons
-\usepackage{amsmath} % for math
 \usepackage[
     pdftitle={Kacem Mathlouthi's CV},
     pdfauthor={Kacem Mathlouthi},
@@ -32,9 +31,7 @@
 \usepackage[pscoord]{eso-pic} % for floating text on the page
 \usepackage{calc} % for calculating lengths
 \usepackage{bookmark} % for bookmarks
-\usepackage{lastpage} % for getting the total number of pages
 \usepackage{changepage} % for one column entries (adjustwidth environment)
-\usepackage{ifthen} % for conditional statements
 \usepackage{needspace} % for avoiding page brake right after the section title
 \usepackage{iftex} % check if engine is pdflatex, xetex or luatex
 
@@ -43,8 +40,6 @@
 \ifPDFTeX
     \input{glyphtounicode}
     \pdfgentounicode=1
-    % \usepackage[T1]{fontenc} % this breaks sb2nov
-    \usepackage[utf8]{inputenc}
     \usepackage{lmodern}
 \fi
 
@@ -57,13 +52,6 @@
 \setlength{\parindent}{0pt} % no indentation
 \setlength{\topskip}{0pt} % no top skip
 \setlength{\columnsep}{0cm} % set column seperation
-%\makeatletter
-%\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
-%\patchcmd{\ps@customFooterStyle}{\thepage}{
-%    \color{gray}\textit{\small Kacem Mathlouthi - Page \thepage{} of \pageref*{LastPage}}
-%}{}{} % replace number by desired string
-%\makeatother
-%\pagestyle{customFooterStyle}
 
 % Vertical rhythm: space above section titles, and between entries in a section.
 \newcommand{\sectiongap}{0.18 cm}
@@ -94,19 +82,6 @@
 }{
     \end{itemize}
 } % new environment for highlights
-
-\newenvironment{highlightsforbulletentries}{
-    \begin{itemize}[
-        topsep=0.10 cm,
-        parsep=0.06 cm,
-        partopsep=0pt,
-        itemsep=0pt,
-        leftmargin=10pt
-    ]
-}{
-    \end{itemize}
-} % new environment for highlights for bullet entries
-
 
 \newenvironment{onecolentry}{
     \begin{adjustwidth}{
