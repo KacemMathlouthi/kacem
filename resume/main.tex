@@ -28,12 +28,12 @@
     colorlinks=true,
     urlcolor=primaryColor
 ]{hyperref} % for links, metadata and bookmarks
-\usepackage[pscoord]{eso-pic} % for floating text on the page
 \usepackage{calc} % for calculating lengths
 \usepackage{bookmark} % for bookmarks
 \usepackage{changepage} % for one column entries (adjustwidth environment)
 \usepackage{needspace} % for avoiding page brake right after the section title
 \usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{accsupp} % for hiding decorative glyphs from text extraction
 
 
 % Ensure that generate pdf is machine readable/ATS parsable:
@@ -112,52 +112,34 @@
     \par\kern\topsep
 } % new environment for the header
 
-\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
-  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
-    \put(
-        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
-        \LenToUnit{\paperheight-0.85 cm}
-    ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in October 2026}\hspace{\widthof{Last updated in October 2026}}
-    }}}%
-  }%
-}%
+% Shown on the page but left out of the text layer, so ATS parsers skip it.
+\newcommand{\artifact}[1]{\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}
 
-% Keep an alias for links whose visible text is styled manually.
-\let\hrefWithoutArrow\href
+\newcommand{\lastupdated}{October 2026}
+
+% A contact link: decorative icon, then the visible text. Usage: \contact{url}{icon}{text}
+\newcommand{\contact}[3]{\mbox{\href{#1}{\color{black}\artifact{{\footnotesize#2}}\hspace*{0.1cm}#3}}}
+
+\newsavebox\namebox
+\newsavebox\updatedbox
 
 
 \begin{document}
-    \newcommand{\AND}{\unskip
-        \cleaders\copy\ANDbox\hskip\wd\ANDbox
-        \ignorespaces
-    }
-    \newsavebox\ANDbox
-    \sbox\ANDbox{}
-
-    \placelastupdatedtext
     \begin{header}
-        \textbf{\fontsize{22 pt}{22 pt}\selectfont Kacem Mathlouthi}
+        % Name centered on the page, with the update date on the same row at the
+        % right edge, vertically centered on the name.
+        \sbox\namebox{\textbf{\fontsize{22 pt}{22 pt}\selectfont Kacem Mathlouthi}}%
+        \sbox\updatedbox{\small\color{gray}\textit{Last updated in \lastupdated}}%
+        \makebox[\linewidth]{\hfill\usebox\namebox\hfill}%
+        \llap{\raisebox{\dimexpr(\ht\namebox-\ht\updatedbox)/2\relax}{\artifact{\usebox\updatedbox}}}
 
 
-        \normalsize
-        \mbox{\hrefWithoutArrow{mailto:kacem.mathlouthi@insat.ucar.tn}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.1cm}kacem.mathlouthi@insat.ucar.tn}}%
-        \kern 0.15 cm%
-        \AND%
-        \kern 0.15 cm%
-        \mbox{\hrefWithoutArrow{tel:+216-52-387-938}{\color{black}{\footnotesize\faPhone*}\hspace*{0.1cm}+216 52 387 938}}%
-        \kern 0.15 cm%
-        \AND%
-        \kern 0.15 cm%
-        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/kacem-mathlouthi/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.1cm}kacem-mathlouthi}}%
-        \kern 0.15 cm%
-        \AND%
-        \kern 0.15 cm%
-        \mbox{\hrefWithoutArrow{https://github.com/KacemMathlouthi}{\color{black}{\footnotesize\faGithub}\hspace*{0.1cm}KacemMathlouthi}}%
-        \kern 0.15 cm%
-        \AND%
-        \kern 0.15 cm%
-        \mbox{\hrefWithoutArrow{https://kacemmathlouthi.dev}{\color{black}{\footnotesize\faGlobe}\hspace*{0.1cm}kacemmathlouthi.dev}}%
+        \fontsize{7.6 pt}{9 pt}\selectfont
+        \contact{mailto:kacem.mathlouthi@insat.ucar.tn}{\faEnvelope[regular]}{kacem.mathlouthi@insat.ucar.tn}\hspace{0.25 cm}%
+        \contact{tel:+216-52-387-938}{\faPhone*}{+216 52 387 938}\hspace{0.25 cm}%
+        \contact{https://www.linkedin.com/in/kacem-mathlouthi/}{\faLinkedinIn}{linkedin.com/in/kacem-mathlouthi}\hspace{0.25 cm}%
+        \contact{https://github.com/KacemMathlouthi}{\faGithub}{github.com/KacemMathlouthi}\hspace{0.25 cm}%
+        \contact{https://kacemmathlouthi.dev}{\faGlobe}{kacemmathlouthi.dev}
     \end{header}
 
     \input{sections/education}
