@@ -57,7 +57,7 @@ export const brands = {
   metis: {
     logo: "/logos/metis.svg",
     color: "#eab308",
-    href: "https://github.com/KacemMathlouthi/metis",
+    href: "https://www.getmetis.tech/",
   },
   openreview: {
     logo: "/logos/openreview.svg",
