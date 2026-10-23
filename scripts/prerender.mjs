@@ -32,8 +32,10 @@ writeFileSync(
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/jpeg" href="/avatar.jpg" />
-    <link rel="apple-touch-icon" href="/avatar.jpg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
     <title>404 · Kacem Mathlouthi</title>
     <meta
       name="description"

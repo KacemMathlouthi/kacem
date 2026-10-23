@@ -1,3 +1,4 @@
+import { execFileSync } from "child_process"
 import path from "path"
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
@@ -5,17 +6,36 @@ import { defineConfig, type Plugin } from "vite"
 
 const SITE = "https://kacemmathlouthi.dev"
 
+/**
+ * Date of the last commit touching any of `paths`, so lastmod only moves when
+ * the content does. Falls back to today outside a git checkout.
+ */
+function lastCommitDate(paths: string[]) {
+  try {
+    const date = execFileSync(
+      "git",
+      ["log", "-1", "--format=%cs", "--", ...paths],
+      {
+        encoding: "utf8",
+      }
+    ).trim()
+    if (date) return date
+  } catch {
+    // not a git checkout
+  }
+  return new Date().toISOString().slice(0, 10)
+}
+
 /** The sitemap is tiny and fully derived, so it is generated, never committed. */
 function buildSitemap() {
-  const lastmod = new Date().toISOString().slice(0, 10)
-  const url = (loc: string, priority: string) =>
-    `  <url>\n    <loc>${SITE}${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`
+  const url = (loc: string, sources: string[]) =>
+    `  <url>\n    <loc>${SITE}${loc}</loc>\n    <lastmod>${lastCommitDate(sources)}</lastmod>\n  </url>`
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${url("/", "1.0")}
-${url("/index.md", "0.8")}
-${url("/kacem-mathlouthi-resume.pdf", "0.5")}
+${url("/", ["index.html", "src/components", "src/lib", "public/logos"])}
+${url("/index.md", ["public/index.md"])}
+${url("/kacem-mathlouthi-resume.pdf", ["public/kacem-mathlouthi-resume.pdf"])}
 </urlset>
 `
 }
@@ -28,7 +48,8 @@ const NOT_FOUND_SHELL = `<!doctype html>
     <meta name="robots" content="noindex" />
     <title>404 · Kacem Mathlouthi</title>
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
-    <link rel="icon" type="image/jpeg" href="/avatar.jpg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <meta name="theme-color" content="#000000" />
   </head>
   <body>
     <div id="root"></div>
