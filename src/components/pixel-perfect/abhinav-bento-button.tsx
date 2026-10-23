@@ -34,7 +34,7 @@ export default function AbhinavBentoButton({
 
   return (
     <button className={classes} style={bentoSurfaceStyle} {...props}>
-      {children || "Bento"}
+      {children}
     </button>
   )
 }

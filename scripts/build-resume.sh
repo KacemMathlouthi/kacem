@@ -28,9 +28,6 @@ pdflatex \
   -output-directory="$resume_build_dir" \
   main.tex
 
-install -d "$repo_root/resume/pdf"
-install -m 0644 "$resume_build_dir/main.pdf" "$repo_root/resume/pdf/resume.pdf"
 install -m 0644 "$resume_build_dir/main.pdf" "$repo_root/public/kacem-mathlouthi-resume.pdf"
 
-echo "Built resume/pdf/resume.pdf"
 echo "Updated public/kacem-mathlouthi-resume.pdf"
