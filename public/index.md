@@ -34,6 +34,10 @@ report generation pipeline.
 
 ## Projects
 
+- **[Daylily](https://daylily-silk.vercel.app)**: an open-source desktop
+  journal for writing one page a day in plain markdown files you own, where AI
+  asks questions but never writes for you. Source:
+  https://github.com/KacemMathlouthi/Daylily.
 - **[Animus](https://tryanimus.app/)**: a platform that turns any topic into
   narrated, research-grounded Manim explainer videos.
 - **[Metis](https://www.getmetis.tech/)**: an AI platform for
