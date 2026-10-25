@@ -13,8 +13,8 @@ Kacem Mathlouthi is a software engineer and AI/ML engineer based in Tunis, Tunis
 - Machine learning engineering intern at Orange (https://www.orange.tn), where he built an edge-optimized CNN for plant disease classification and an agentic report generation pipeline.
 
 # Personal projects
-- Daylily (https://daylily-silk.vercel.app, source: https://github.com/KacemMathlouthi/Daylily): an open-source (AGPL-3.0) desktop journal for macOS, Windows and Linux. You write one page a day in plain markdown files you own; at 4am the day seals and becomes read-only, and each written day grows a flower in a garden. AI is optional and only asks reflective questions, it never writes for you.
 - Animus (https://tryanimus.app/): a platform that turns any topic into narrated, research-grounded Manim explainer videos.
+- Daylily (https://daylily.ink, source: https://github.com/KacemMathlouthi/Daylily): an open-source (AGPL-3.0) desktop journal for macOS, Windows and Linux. You write one page a day in plain markdown files you own; at 4am the day seals and becomes read-only, and each written day grows a flower in a garden. AI is optional and only asks reflective questions, it never writes for you.
 - Metis (https://www.getmetis.tech/): an AI platform for GitHub pull requests featuring a cloud coding agent for autonomous code review, issue resolution, and PR summaries.
 
 # Research
