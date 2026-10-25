@@ -36,8 +36,11 @@ export function Bio() {
 
       <p>
         Outside of work, I build things I wish existed. Right now I&apos;m
-        building <Brand {...brands.animus}>Animus</Brand>, a platform that turns
-        any topic into narrated, research-grounded{" "}
+        building <Brand {...brands.daylily}>Daylily</Brand>, an open-source
+        desktop journal for writing <Highlight>one page a day</Highlight> in
+        plain markdown files you own, where AI asks questions but never writes
+        for you. I&apos;m also building <Brand {...brands.animus}>Animus</Brand>
+        , a platform that turns any topic into narrated, research-grounded{" "}
         <Highlight>Manim explainer videos</Highlight>. Before that I built{" "}
         <Brand {...brands.metis}>Metis</Brand>, an AI platform for GitHub pull
         requests with a <Highlight>cloud coding agent</Highlight> for autonomous
