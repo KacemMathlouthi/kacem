@@ -49,15 +49,15 @@ export const brands = {
     color: "#d16a6a",
     href: "https://insat.rnu.tn",
   },
-  daylily: {
-    logo: "/logos/daylily.png",
-    color: "#f0875a",
-    href: "https://daylily-silk.vercel.app",
-  },
   animus: {
     logo: "/logos/animus.svg",
     color: "#e7b277",
     href: "https://tryanimus.app/",
+  },
+  daylily: {
+    logo: "/logos/daylily.png",
+    color: "#f0875a",
+    href: "https://daylily.ink",
   },
   metis: {
     logo: "/logos/metis.svg",
